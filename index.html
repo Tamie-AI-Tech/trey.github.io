@@ -60,8 +60,9 @@
 						
 					<!-- Banner -->
 					
-
+					
 					<!-- Intro -->
+					
 					<header class="major">
 						<h2>Our Activities</h2>
 					</header>
@@ -106,14 +107,66 @@
 						</section>
 
 				</section>
+				<section id="gallery">
+				<div class = "container1">
+					<header class="major">
+						<h2>Gallery</h2>
+					</header>
+		
+					<div class="image-container1">
+						<div class="image"><img src="images/IMG-20230430-WA0008.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0009.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0010.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0012.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0013.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0016.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0015.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0017.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0018.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0020.jpg"></div>
+						<div class="image"><img src="images/IMG-20230430-WA0022.jpg"></div>
+						<div class="image"><img src="images/IMG_8728.JPG"></div>
+						<div class="image"><img src="images/IMG_8727.JPG"></div>
+						<div class="image"><img src="images/IMG_8723.JPG"></div>
+						<div class="image"><img src="images/IMG_8722.JPG"></div>
+						<div class="image"><img src="images/IMG_8711.JPG"></div>
+						<div class="image"><img src="images/IMG_8703.JPG"></div>
+						<div class="image"><img src="images/IMG_8696.JPG"></div>
+						<div class="image"><img src="images/IMG_8695.JPG"></div>
+						<div class="image"><img src="images/IMG_8694.JPG"></div>
+						<div class="image"><img src="images/IMG_8691.JPG"></div>
+						<div class="image"><img src="images/IMG_8689.JPG"></div>
+						<div class="image"><img src="images/IMG_8686.JPG"></div>
+						<div class="image"><img src="images/IMG_8685.JPG"></div>
+						<div class="image"><img src="images/IMG_8683.JPG"></div>
+						<div class="image"><img src="images/IMG-20230501-WA0006.jpg"></div>
+						<div class="image"><img src="images/IMG-20230501-WA0007.jpg"></div>
+						<div class="image"><img src="images/IMG-20230501-WA0008.jpg"></div>
+						<div class="image"><img src="images/IMG-20230501-WA0010.jpg"></div>
+						<div class="image"><img src="images/IMG-20230501-WA0011.jpg"></div>
+						<div class="image"><img src="images/IMG-20230501-WA0012.jpg"></div>
+						<div class="image"><img src="images/IMG-20230501-WA0014.jpg"></div>
+						<div class="image"><img src="images/IMG-20230501-WA0016.jpg"></div>
+				
+
+					</div>
+					<div class="popup-image">
+						<span>&times;</span>
+						<img src="images/IMG-20230430-WA0008.jpg">
+		
+					</div>
+				</section>
+				</div>
 
 			<!-- Main -->
+			<!--
 				<section id="main">
 					<div class="container">
 						<div class="row">
-							<div class="col-12">
+							<div class="col-12"> -->
 
 								<!-- Portfolio -->
+								<!--
 									<section id="gallery">
 										<header class="major">
 											<h2>Gallery</h2>
@@ -216,6 +269,7 @@
 
 							</div>
 							<div class="col-12">
+							-->
 
 								<!-- Blog -->
 									<section id="about">
@@ -227,7 +281,7 @@
 											<div class="col-6 col-12-small">
 												<section class="box">
 												
-													<a class="image featured"><img src="images/IMG_8713.JPG" alt="" /></a>
+													<a class="image featured"><img src="images/IMG_8711.JPG" alt="" /></a>
 													<header>
 														<h3>MEGA KG Team</h3>
 														
@@ -367,6 +421,30 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				
+  document.querySelectorAll('.image-container1 img').forEach((image) => {
+    image.onclick = () => {  
+      document.querySelector('.popup-image').style.display = 'block';
+      document.querySelector('.popup-image img').src = image.getAttribute('src');
+    }
+  });
+
+  document.querySelector('.popup-image span').onclick = () => {
+    document.querySelector('.popup-image').style.display = 'none';
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && document.querySelector('.popup-image').style.display === 'block') {
+      // Page is visible and popup is open
+      // Perform necessary actions here, such as closing the popup
+      document.querySelector('.popup-image').style.display = 'none';
+    }
+  });
+</script>
+
+				
+				
 
 	</body>
 </html>
